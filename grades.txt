@@ -1,0 +1,11 @@
+fred:89
+bob:98
+strider:76
+shadow:87
+lyra:88
+maya:67
+terry:95
+fancisco:100
+thomas:74
+ammon:9
+evan:102
