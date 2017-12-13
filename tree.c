@@ -25,6 +25,7 @@ void addToTree(tNodep *top, char *name, int score) {
 	}
 	else
 		fprintf(stderr,"Error allocating memory");
+	free(tmp);
 }
 void inOrderTreeTraverse(tNodep top,void (*func)(tNodep)) {
 	if (top) {
@@ -37,10 +38,15 @@ void inOrderTreeTraverse(tNodep top,void (*func)(tNodep)) {
 void leafFirstTreeTraverse(tNodep top,void (*func)(tNodep)) {
 	if (top) {
 		leafFirstTreeTraverse(top->left,func);
+		leafFirstTreeTraverse(top->right,func);
 		func(top);
 	}
 }
 void freeNode(tNodep node) {
+//	if (node->left != NULL)
+//	    freeNode(node->left);
+//	if (node->right != NULL)
+//	    freeNode(node->left);
 	free(node->name);
 	free(node);
 }

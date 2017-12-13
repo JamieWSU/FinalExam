@@ -40,6 +40,6 @@ int main(int argc, char *argv[],char *env[]) {
 
 	inOrderTreeTraverse(top,printTreeNode);
 	freeTree(top);
-    free(buffer);
+	free(buffer);
 	return 0;
 }
